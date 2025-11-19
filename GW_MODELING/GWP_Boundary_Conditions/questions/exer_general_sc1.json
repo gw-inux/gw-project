@@ -1,0 +1,50 @@
+[
+  {
+    "question": "A 1D model with a no-flow boundary on the left uses a **specified head boundary** condition at the right outlet. How can we modify the amount of outflow?",
+    "options": {
+      "A) Increase $K$": false,
+      "B) Decrease $K$": false,
+      "C) Increase $R$": true,
+      "D) Decrease $R$": true,
+      "E) None of the above": false
+    },
+    "success": "✅ Correct! For our 1D model with one no-flow boundary, the outflow equals the recharge rate multiplied by the surface area (length x width). Only changes to the recharge rate will alter the total outflow.",
+    "error": "❌ Some of your choices are not correct. In our 1D steady-state model with one no-flow boundary, outflow is determined by the recharge rate only, not by hydraulic conductivity."
+  },
+  {
+    "question": "A 1D model with a no-flow boundary on the left uses a **specified-head** boundary condition at the right outlet. The groundwater recharge is specified as 180 mm/yr. What parameter change is suitable to increase the hydraulic head in the groundwater at the right boundary? (Mark ALL correct answers)",
+    "options": {
+      "A) Increasing $R$": false,
+      "B) Decreasing $R$": false,
+      "C) Increasing $K$": false,
+      "D) Decreasing $K$": false,
+      "E) None of the above options": true
+    },
+    "success": "✅ Correct! A specified-head boundary fixes the head, so no parameter change will affect it.",
+    "error": "❌ Some of your choices are not correct. The head at a Dirichlet boundary remains constant, regardless of other parameters."
+  },
+  {
+    "question": "A 1D model with a no-flow boundary on the left uses a **head-dependent** boundary condition at the right outlet. The groundwater recharge is specified as 180 mm/yr. What parameter change is suitable to **increase the outflow** at the boundary? (Mark ALL correct answers)",
+    "options": {
+      "A) None of the below": true,
+	    "B) Increasing $K$": false,
+      "C) Decreasing $K$": false,
+      "D) Increasing $C_{Riv}$": false,
+      "E) Decreasing $C_{Riv}$": false
+    },
+    "success": "✅ Correct! The total outflow is fixed by recharge. Changing $K$ or $C_{Riv}$ does not affect total discharge.",
+    "error": "❌ Some of your choices are not correct. Changing conductivity or conductance affects head distribution, not the total outflow given a constant recharge."
+  },
+  {
+    "question": "A 1D model with a no-flow boundary on the left uses a **head-dependent** boundary condition (**River BC**) at the right outlet. The groundwater recharge is specified as 180 mm/yr. What parameter change is suitable to **increase the hydraulic head** in the groundwater at the right boundary? (Mark ALL correct answers)",
+    "options": {
+	    "A) Decreasing $K$": false,
+	    "B) Decreasing $C_{Riv}$": true,
+      "C) Increasing $C_{Riv}$": false,
+      "D) Increasing $K$": false,
+      "E) None of A, B, C, or D": false
+    },
+    "success": "✅ Correct! Lower $C_{Riv}$ increases the resistance between the groundwater model and the boundary, thus the groundwater heads must be higher to drive the same volume of water out of the boundary. Lowering  $K$ increases overall resistance of the aquifer requiring a steeper gradient in the aquifer, but the gradient between the aquifer and the river must be the same for a given outflow so the head in the cell next to the river does not change when $K$ is changed.",
+    "error": "❌ Some of your choices are not correct. Increasing conductance reduces the resistance to flow and therefore a lower gradient is required to drive the same outflow to the river so heads are lower. For a given recharge and conductance, the gradient at the river is determined so the head next to the river does not change when $K$ is changed."
+  }
+]

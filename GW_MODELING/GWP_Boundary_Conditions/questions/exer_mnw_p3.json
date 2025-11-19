@@ -1,0 +1,68 @@
+[
+  {
+    "question": "What is the purpose of a limiting head ($h_{lim}$) in MNW simulations? (Mark ALL correct answers)",
+    "options": {
+      "A) To prevent excessive drawdown in the well.": true,
+      "B) To stop pumping when $h_{well}$ falls below $h_{lim}$.": false,
+      "C) To trigger a reduction in Q when $h_{well}$ falls below $h_{lim}$.": true,
+      "D) To set the minimum allowable value for $h_{aq}$.": false
+    },
+    "success": "✅ Correct. The limiting head is a control to protect the well from overdraw.",
+    "error": "❌ Some of your choices are not correct. $h_{lim}$ is a lower elevation bound for head in the well to protect the pump."
+  },
+  {
+    "question": "What happens when the computed $h_{well}$ falls below $h_{lim}$? (Mark ALL correct answers)",
+    "options": {
+      "A) The discharge Q is reduced automatically.": true,
+      "B) The aquifer head is lowered.": false,
+      "C) The simulation holds $h_{well} = h_{thr}$.": true,
+      "D) The CWC parameters are reset.": false
+    },
+    "success": "✅ Correct. The system adjusts Q to keep the well head at the threshold.",
+    "error": "❌ Some of your choices are not correct. Aquifer head and parameters stay constant — only Q is limited."
+  },
+  {
+    "question": "Under what conditions does the MNW model resume pumping using the Qmx limit? (Mark ALL correct answers)",
+    "options": {
+      "A) When the cell head rises and the computed Q exceeds Qmx.": true,
+      "B) When the pumping rate surpasses the threshold needed for restart.": true,
+      "C) When the pumping rate, based on the CWC equation, is too high.": false,
+      "D) When $h_{well}$ exceeds $h_{aq}$.": false
+    },
+    "success": "✅ Correct. Qmx defines the minimum discharge required to restart pumping after it was stopped due to head constraints.",
+    "error": "❌ Some of your choices are not correct. Qmx only becomes relevant when the well is inactive and conditions improve sufficiently to restart pumping."
+  },
+  {
+    "question": "A MNW well is pumping water with the desired discharge $Q_{des}$. The head in the well is above the limiting head. What kind of boundary condition represents MNW for this state? (Mark ALL correct answers)",
+    "options": {
+      "A) A first type boundary condition because $h_{lim}$ is specified.": false,
+      "B) A second type boundary condition because $Q_{des}$ is specified.": true,
+      "C) A third type boundary condition because $Q$ is changing with cell water head $h_{aq}$.": false,
+      "D) Smaller P values make the system more nonlinear.": false
+    },
+    "success": "✅ Correct. If $h_{well}$ is above $h_{lim}$ the discharge is not constrained and specified as $Q_{des}$. And $Q_{des}$ is not depending on the cell water head $h_{aq}$.",
+    "error": "❌ Some of your choices are not correct. If MNW pumps with $Q_{des}$ and $h_{well}$ is above $h_{lim}$ then the boundary is of second type. This is visible by the vertical line in the Q versus h plot."
+  },
+  {
+    "question": "What happens when the well head reaches the threshold head and the discharge falls below Qmn? (Mark ALL correct answers)",
+    "options": {
+      "A) Pumping is stopped to protect the well.": true,
+      "B) The system maintains discharge at Qmn.": false,
+      "C) The well enters an inactive state.": true,
+      "D) The threshold head is ignored in favor of Q.": false
+    },
+    "success": "✅ Correct. If Q < Qmn under limiting head conditions, pumping stops and the well becomes inactive.",
+    "error": "❌ Some of your choices are not correct. Qmn defines the lowest allowable pumping rate — below this, the pump shuts off."
+  },
+  {
+    "question": "When and how does the MNW model resume pumping after a shutdown due to low head? (Mark ALL correct answers)",
+    "options": {
+      "A) Pumping resumes when Q exceeds Qmx.": true,
+      "B) The aquifer head must recover above the threshold head.": true,
+      "C) The system ignores Qmx after the first shutdown.": false,
+      "D) Qmx sets the minimum flow required to restart pumping.": true
+    },
+    "success": "✅ Excellent. MNW restarts a well only when both head and Q conditions improve above defined limits.",
+    "error": "❌ Some of your choices are not correct. Qmx and threshold head are key conditions for restarting pumping after protective shutdown."
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Under which condition is flow through a river boundary considered 'constant'? (Mark ALL correct answers)",
+    "options": {
+      "A) When groundwater head is lower than riverbed bottom elevation": true,
+      "B) When river stage is below riverbed bottom": false,
+      "C) When groundwater head equals riverbed bottom elevation": true,
+      "D) When the riverbed conductance is zero": true
+    },
+    "success": "✅ Correct. Constant flow occurs if the groundwater head is below the riverbed bottom. Flow is also a constant rate of zero when the conductance is zero.",
+    "error": "❌ Review the RIV section to better understand when MODFLOW sets flow to a constant value — it depends on the groundwater head and riverbed conductance."
+  },
+  {
+    "question": "What happens when the groundwater head is higher than the river stage and both are above the riverbed bottom? (Mark ALL correct answers)",
+    "options": {
+      "A) The river recharges the groundwater": false,
+      "B) The groundwater discharges into the river": true,
+      "C) Flow is proportional to conductance and head difference": true,
+      "D) No flow occurs in this condition": false
+    },
+    "success": "✅ Correct. This is a typical 'gaining river' case, where the groundwater discharges to the river.",
+    "error": "❌ Flow direction depends on the relative heads — reconsider which is higher, the groundwater head or river stage and the resulting direction of water movement."
+  },
+  {
+    "question": "Which of the following factors influence the maximum flow from river to groundwater in MODFLOW’s RIV package? (Mark ALL correct answers)",
+    "options": {
+      "A) The river stage": true,
+      "B) The groundwater head": true,
+      "C) The river bottom elevation": true,
+      "D) The riverbed conductance": true
+    },
+    "success": "✅ Correct. All four parameters affect the flow. Conductance scales the head difference, and the riverbed bottom elevation determines the upper bound to the amount of water that can flow into the groundwater.",
+    "error": "❌ All listed parameters are involved in determining flow magnitude and direction."
+  },
+  {
+    "question": "In a scenario where the riverbed conductance is low, what is the expected behavior? (Mark ALL correct answers)",
+    "options": {
+      "A) Very little flow between river and groundwater": true,
+      "B) Flow increases sharply with small head differences": false,
+      "C) The Q–h curve is steep": false,
+      "D) The exchange flux is small even with large head differences": true
+    },
+    "success": "✅ Correct. A low conductance limits the flow, and results in a low slope of the  Q–h plot.",
+    "error": "❌ Review the RIV section to better understand the role of conductance and the influence of conductance on the slope of the Q–h plot. Conductance reflects the ease with which water flows across the interface and there is little flow even for large head differences."
+  },
+  {
+    "question": "Why does MODFLOW limit river recharge when groundwater head is below the riverbed bottom? (Mark ALL correct answers)",
+    "options": {
+      "A) It prevents unrealistic downward seepage from the river": true,
+      "B) Because the unsaturated conditions result in a constant head at the bottom of the riverbed": true,
+      "C) To maintain a constant conductance value independent of head conditions": false,
+	    "D) Because the river cell becomes inactive when the groundwater head drops below the bottom of the riverbed": false
+    },
+    "success": "✅ Correct. MODFLOW restricts river recharge below the bottom to reflect unsaturated conditions below the river. Without restriction the river seepage would be unrealistic.",
+    "error": "❌ The restriction is due to unsaturated conditions beneath the riverbed, it is not related to conductance and the river cells remain active. Without this restriction an unrealistic amount of water would flow out of the river."
+  },
+  {
+    "question": "When the groundwater head equals the river stage, and both are above the bottom, what is the flow? (Mark ALL correct answers)",
+    "options": {
+      "A) Zero": true,
+      "B) Maximum": false,
+      "C) Depends on conductance": false,
+      "D) Depends on river bottom elevation": false
+    },
+    "success": "✅ Correct. No flow occurs when heads are equal — the system is balanced.",
+    "error": "❌ If there is no difference in head, then there is no driving force and there will be no flow no matter the values of other parameters."
+  }
+]

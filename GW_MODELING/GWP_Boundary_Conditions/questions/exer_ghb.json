@@ -1,0 +1,73 @@
+[
+  {
+    "question": "When does the General Head Boundary (GHB) result in inflow to a groundwater system (i.e., acts as source), and when in outflow (i.e., acts as sink)? (Mark ALL correct answers)",
+    "options": {
+      "When the groundwater head is equal to the boundary head, the GHB is a source.": false,
+      "The GHB acts as a source when the boundary head is higher than the groundwater head.": true,
+      "The GHB acts as a sink when the groundwater head is higher than the boundary head.": true,
+      "The GHB always acts as a sink, regardless of the head difference.": false,
+      "The GHB is inactive if heads are equal.": true
+    },
+    "success": "✅ Correct. The GHB can switch between source and sink depending on head difference, and becomes inactive when heads are equal.",
+    "error": "❌ Some of your choices are not correct. Review the role of head differences. The GHB acts as a source or sink depending on which head is higher."
+  },
+  {
+    "question": "What happens to the boundary flux Q_B if the conductance C_B is set to zero or extremely high? (Mark ALL correct answers)",
+    "options": {
+      "With C_B = 0, there is no exchange flux through the GHB.": true,
+      "An extremely high C_B forces the groundwater head to equal the boundary head.": true,
+      "With C_B = 0, the groundwater head equals the boundary head.": false,
+      "A very high C_B leads to unrealistic head gradients in the groundwater system.": false,
+      "Q_B increases proportionally with C_B, assuming a fixed head difference.": true
+    },
+    "success": "✅ Well reasoned. A zero conductance blocks flow, and high conductance amplifies the flux and head coupling.",
+    "error": "❌ Some of your choices are not correct. Check the influence of the conductance value on the head difference and resulting flow."
+  },
+  {
+    "question": "How does increasing conductance C_B influence the sensitivity of flux to groundwater head changes? (Mark ALL correct answers)",
+    "options": {
+      "Sensitivity decreases with higher conductance.": false,
+      "Sensitivity increases with higher conductance.": true,
+      "The GHB flux changes by a larger amount for small head changes.": true,
+      "High conductance causes the GHB to behave more like a fixed-head boundary.": true,
+      "Sensitivity is independent of conductance.": false
+    },
+    "success": "✅ Excellent. Higher conductance enhances sensitivity and causes the GHB to mimic specified-head behavior.",
+    "error": "❌ Some of your choices are not correct. Revisit how conductance affects the slope of the Q-h relationship and system responsiveness."
+  },
+  {
+    "question": "Why might a modeler choose a GHB over a specified-head condition? (Mark ALL correct answers)",
+    "options": {
+      "To simulate a semi-permeable lateral boundary with a known head.": true,
+      "To model evapotranspiration losses from the unsaturated zone.": false,
+      "Because GHB can mimic leakage from adjacent aquifers.": true,
+      "To represent a boundary with a fixed flow rate.": false
+    },
+    "success": "✅ Correct. The GHB is flexible and suitable for simulating dynamic inflow/outflow at semi-permeable boundaries.",
+    "error": "❌ Some of your choices are not correct. Think about the physical situations GHBs are designed to represent and how they differ from other boundary types."
+  },
+  {
+    "question": "How does the slope of the $Q_B$–$h_{gw}$ plot respond to increasing conductance $C_B$? (Mark ALL correct answers)",
+    "options": {
+      "The slope increases.": true,
+      "The slope remains constant.": false,
+      "The flow becomes more sensitive to head differences.": true,
+      "The slope decreases.": false
+    },
+    "success": "✅ Correct. A higher $C_B$ results in a large change in $Q_B$ for the same head change.",
+    "error": "❌ Some of your choices are not correct. Recall that $Q_B$ is directly proportional to $C_B$ times the head difference."
+  },
+  {
+    "question": "What is true when $h_{gw} = H_B$? (Mark ALL correct answers)",
+    "options": {
+      "The flow $Q_B$ is zero.": true,
+      "The boundary acts as a source.": false,
+      "The boundary acts as a sink.": false,
+      "There is no net exchange across the boundary.": true
+    },
+    "success": "✅ Correct. Equal heads mean no driving force, so no flow occurs.",
+    "error": "❌ Some of your choices are not correct. Review the condition when $H_B = h_{gw}$. There is no head gradient to cause flow."
+  }
+]
+
+

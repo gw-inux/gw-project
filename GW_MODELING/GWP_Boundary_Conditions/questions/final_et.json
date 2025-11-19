@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Which equation best describes the rate of ET used in MODFLOW? (Mark ALL correct answers)",
+    "options": {
+      "A) ET = ETmax if head ≥ ET surface": true,
+      "B) ET = ETmax  (head - extinction depth) / (ET surface - extinction depth)": true,
+      "C) ET = 0 if head < extinction depth": true,
+      "D) ET = constant at all heads": false
+    },
+    "success": "✅ Correct. The ET function is piecewise linear, with full, partial, or no ET.",
+    "error": "❌ Some of your choices are not correct. Actual ET depends on groundwater depth relative to ET surface and extinction depth."
+  },
+  {
+    "question": "Which parameters define the shape of the ET Q–h curve? (Mark ALL correct answers)",
+    "options": {
+      "A) ET surface elevation": true,
+      "B) Extinction depth": true,
+      "C) Aquifer transmissivity": false,
+      "D) Maximum ET rate (ETmax)": true
+    },
+    "success": "✅ That’s right. These values control the location and slope of the ET Q-h plot segments.",
+    "error": "❌ Some of your choices are not correct. Transmissivity doesn’t shape the Q–h curve for ET."
+  },
+  {
+    "question": "What happens to the ET rate when the water table is below the extinction depth? (Mark ALL correct answers)",
+    "options": {
+      "A) ET = 0": true,
+      "B) ET = ETmax": false,
+      "C) ET continues at a reduced rate": false,
+      "D) ET increases due to capillarity": false
+    },
+    "success": "✅ Correct. No ET occurs below the extinction depth.",
+    "error": "❌ Some of your choices are not correct. Actual ET stops once the groundwater head is below the extinction depth."
+  },
+  {
+    "question": "Why is the ET Q–h plot flat for high heads? (Mark ALL correct answers)",
+    "options": {
+      "A) Because the ET rate equals maximum ET rate when water is near the surface": true,
+      "B) Because of hydraulic resistance in the unsaturated zone": false,
+      "C) Because recharge dominates at shallow depths": false,
+      "D) Because when groundwater head is higher than the ET surface ET is at the maximum rate": true
+    },
+    "success": "✅ That’s it. The flat region means ET is at its maximum because head is at, or above, the ET surface.",
+    "error": "❌ Some of your choices are not correct. When water is shallow, ET rate is unaffected by further head increases because head is at, or above, the ET surface."
+  },
+  {
+    "question": "What is the conceptual role of the extinction depth in groundwater models? (Mark ALL correct answers)",
+    "options": {
+      "A) It defines a head elevation below which evapotranspiration ceases": true,
+      "B) It sets the lowest elevation for ET occurrence in the EVT boundary condition": true,
+      "C) It marks the end of unsaturated zone storage": false,
+      "D) It represents the depth at which roots can no longer access water": true
+    },
+    "success": "✅ Yes — extinction depth defines where ET can no longer extract water.",
+    "error": "❌ Some of your choices are not correct. The extinction depth is the elevation at which vegetation can no longer access water, not unsaturated storage."
+  },
+  {
+    "question": "What does the sloped section of the Q–h plot represent for ET? (Mark ALL correct answers)",
+    "options": {
+      "A) A linear reduction of ET with declining head": true,
+      "B) Nonlinear seepage losses": false,
+      "C) Maximum ET rate": false,
+      "D) Head-dependent evapotranspiration": true
+    },
+    "success": "✅ Exactly. This slope shows how the ET rate declines as the water table declines.",
+    "error": "❌ Some of your choices are not correct. The slope reflects the transition zone in which ET is changing with depth — not that maximum ET nor nonlinear behavior."
+  }
+]
